@@ -1,0 +1,110 @@
+/* ═══════════════════════════════════════════════════════════
+   SiPush - Obsidian 插件样式
+   V2 新增：冲突弹窗 / 同步报告
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── 搜索弹窗 ── */
+.si-push-search-modal input[type="text"] {
+  border: 1px solid var(--background-modifier-border);
+}
+.si-push-search-results {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.si-push-search-hint {
+  padding: 12px;
+  text-align: center;
+  color: var(--text-muted);
+}
+.si-push-error {
+  padding: 12px;
+  text-align: center;
+  color: var(--text-error);
+}
+
+/* ── 搜索结果列表 ── */
+.si-push-doc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.si-push-doc-item {
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.si-push-doc-item:hover {
+  background: var(--background-modifier-hover);
+}
+.si-push-doc-path {
+  font-weight: 500;
+  color: var(--text-normal);
+  font-size: 13px;
+}
+.si-push-doc-preview {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── V2: 冲突弹窗 ── */
+.si-push-conflict-modal h2 {
+  margin-top: 0;
+}
+.si-push-conflict-desc {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.si-push-conflict-panes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.si-push-conflict-pane {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 12px;
+}
+.si-push-conflict-pane h3 {
+  margin-top: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.si-push-conflict-pane pre {
+  font-size: 11px;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+  color: var(--text-normal);
+}
+.si-push-conflict-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+/* ── V2: 同步报告 ── */
+.si-push-search-modal ul.si-push-doc-list {
+  max-height: 280px;
+}
+.si-push-success { color: var(--text-accent); }
+.si-push-warning { color: #e0a800; }
+.si-push-error   { color: var(--text-error); }
+
+/* ── 信息框 ── */
+.si-push-info {
+  border-radius: 6px;
+}
+.si-push-info code {
+  background: var(--background-modifier-form-field);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+}
